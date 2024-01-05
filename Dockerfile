@@ -3,7 +3,7 @@ FROM rust:bookworm AS builder
 
 WORKDIR /app
 COPY . .
-RUN cargo build --release
+RUN cargo build --target wasm32-unknown-unknown --release
 
 # Final run stage
 FROM debian:bookworm-slim AS runner
