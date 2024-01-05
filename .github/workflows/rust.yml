@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: trunk serve --release --verbose
+      run: cargo build --release --verbose
     - name: Run tests
       run: cargo test --verbose
