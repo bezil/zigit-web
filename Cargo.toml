@@ -7,7 +7,7 @@ edition = "2021"
 
 
 # If you need the Renderer(csr) for testing or examples, you should enable it in the dev-dependencies instead.
-[dependencies]
+[dev-dependencies]
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
 
 
