@@ -1,0 +1,11 @@
+[package]
+name = "zigit-web"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+# If you need the Renderer(csr) for testing or examples, you should enable it in the dev-dependencies instead.
+[dependencies]
+yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
