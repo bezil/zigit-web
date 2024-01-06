@@ -1,0 +1,200 @@
+{
+  "resolvedId": "/Users/basilgeorge/Downloads/zigit-web/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { initCustomFormatter, warn } from '@vue/runtime-dom';\nexport * from '@vue/runtime-dom';\n\nfunction initDev() {\n  {\n    initCustomFormatter();\n  }\n}\n\nif (!!(process.env.NODE_ENV !== \"production\")) {\n  initDev();\n}\nconst compile = () => {\n  if (!!(process.env.NODE_ENV !== \"production\")) {\n    warn(\n      `Runtime compilation is not supported in this build of Vue.` + (` Configure your bundler to alias \"vue\" to \"vue/dist/vue.esm-bundler.js\".` )\n    );\n  }\n};\n\nexport { compile };\n",
+      "start": 1704513085706,
+      "end": 1704513085746,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1704513085746,
+      "end": 1704513085746,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1704513085746,
+      "end": 1704513085747,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1704513085747,
+      "end": 1704513085747,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1704513085747,
+      "end": 1704513085747,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { initCustomFormatter, warn } from \"@vue/runtime-dom\";\nexport * from \"@vue/runtime-dom\";\nfunction initDev() {\n  {\n    initCustomFormatter();\n  }\n}\nif (false) {\n  initDev();\n}\nconst compile = () => {\n  if (false) {\n    warn(\n      `Runtime compilation is not supported in this build of Vue. Configure your bundler to alias \"vue\" to \"vue/dist/vue.esm-bundler.js\".`\n    );\n  }\n};\nexport { compile };\n",
+      "start": 1704513085747,
+      "end": 1704513085884,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1704513085884,
+      "end": 1704513085884,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1704513085884,
+      "end": 1704513085884,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1704513085884,
+      "end": 1704513085884,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1704513085884,
+      "end": 1704513085884,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1704513085884,
+      "end": 1704513085886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1704513085886,
+      "end": 1704513085886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1704513085886,
+      "end": 1704513085886,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1704513085886,
+      "end": 1704513085886,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1704513085886,
+      "end": 1704513085886,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1704513085886,
+      "end": 1704513085892,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1704513085892,
+      "end": 1704513085893,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1704513085893,
+      "end": 1704513085893,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1704513085893,
+      "end": 1704513085893,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1704513085893,
+      "end": 1704513085893,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1704513085893,
+      "end": 1704513085893,
+      "order": "normal"
+    }
+  ]
+}
