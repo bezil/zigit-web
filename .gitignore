@@ -1,5 +1,5 @@
 .dockerignore
 
 # Added by cargo
-/dist
+dist
 /target
