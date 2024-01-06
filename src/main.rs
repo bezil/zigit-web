@@ -15,7 +15,7 @@ fn App() -> Html {
     };
 
     html! {
-        <div>
+        <div class="h-screen bg-zig-grey text-white">
             <NavHeader />
             <button {onclick}>{ "+1" }</button>
             <p>{ *counter }</p>

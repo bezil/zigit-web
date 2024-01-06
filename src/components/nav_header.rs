@@ -7,15 +7,17 @@ pub fn NavHeader() -> Html {
 
     html! {
         <div
-            class="flex"
-            style="background-color:#404040"
+            class="flex items-center px-4 py-3 text-white w-full
+            bg-zig-grey/50 border-b border-b-white/20"
         >
             <img
-                width="200px"
-                src="img/logo.png" alt="Logo" class="logo"
+                width="100px"
+                src="img/logo.png" alt="zigit" class="logo"
             />
+            <div class="flex justify-center space-x-8 w-full">
             <span>{ nav_items[0] }</span>
             <span>{ nav_items[1] }</span>
+            </div>
         </div>
     }
 }

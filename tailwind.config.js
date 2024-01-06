@@ -5,7 +5,12 @@ module.exports = {
     },
     darkMode: "media", // 'media' or 'class'
     theme: {
-      extend: {},
+      extend: {
+        colors: {
+          'zig-grey': '#404040',
+          'zig-orange': '#ffb152',
+        },
+      },
     },
     variants: {
       extend: {},
