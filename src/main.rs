@@ -1,4 +1,7 @@
 use yew::prelude::*;
+mod components;
+
+use components::nav_header::NavHeader;
 
 #[function_component]
 fn App() -> Html {
@@ -13,6 +16,7 @@ fn App() -> Html {
 
     html! {
         <div>
+            <NavHeader />
             <button {onclick}>{ "+1" }</button>
             <p>{ *counter }</p>
         </div>
