@@ -1,4 +1,8 @@
 /node_modules
 /dist
-CNAME
 .dockerignore
+
+
+# Added by cargo
+
+/target
