@@ -620,12 +620,12 @@ function __wbg_get_imports() {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper223 = function(arg0, arg1, arg2) {
-        const ret = makeClosure(arg0, arg1, 60, __wbg_adapter_20);
+    imports.wbg.__wbindgen_closure_wrapper256 = function(arg0, arg1, arg2) {
+        const ret = makeClosure(arg0, arg1, 87, __wbg_adapter_20);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper493 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 157, __wbg_adapter_23);
+    imports.wbg.__wbindgen_closure_wrapper534 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 185, __wbg_adapter_23);
         return addHeapObject(ret);
     };
 
@@ -667,7 +667,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('zigit-web-b5e6e9d196e65c0e_bg.wasm', import.meta.url);
+        input = new URL('zigit-web-a62d289192e826d0_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
