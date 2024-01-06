@@ -1,40 +1,69 @@
-# https://github.com/actions/deploy-pages#usage
-name: Deploy to GitHub Pages
+# This GitHub actions was inspired from
+# https://www.reddit.com/r/rust/comments/10eiysf/comment/j4rmeum/?utm_source=share&utm_medium=web2x&context=3
+
+name: CD - Deploy Rust Yew
+
+# Controls when the workflow will run
 on:
-  workflow_dispatch:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches:
-      - master
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: corepack enable
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Restore cache
+        uses: actions/cache@v3
         with:
-          node-version: "20"
-      # Pick your own package manager and build script
-      - run: npm install
-      - run: npm run build --preset=github_pages
+          path: |
+            ~/.cargo/bin
+            ~/.cargo/git
+            ~/.cargo/registry
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Install Trunk
+        uses: jetli/trunk-action@v0.4.0
+        with:
+          # Optional version of trunk to install(eg. 'v0.16.0', 'latest')
+          version: "latest"
+      - name: Add wasm target
+        run: |
+          rustup target add wasm32-unknown-unknown
+      - name: Create Empty Manga directory
+        # This prevents an issue from build.rs
+        run: |
+          mkdir -p ./src/assets/manga
+      - name: Build the Rust WASM app and all of its assets
+        run: trunk build --public-url ${{ github.event.repository.name }} --release
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./.output/public
-  # Deployment job
+          path: "./dist"
+
   deploy:
-    # Add a dependency to the build job
     needs: build
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
-    # Deploy to the github_pages environment
-    environment:
-      name: github_pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    # Specify runner + deployment step
     runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
