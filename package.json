@@ -1,4 +1,5 @@
 {
+  "homepage": "http://bezil.github.io/zigit-web",
   "name": "nuxt-app",
   "private": true,
   "type": "module",
@@ -8,9 +9,12 @@
     "start": "node .output/server/index.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "nuxt": "^3.9.0",
     "vue": "^3.4.5",
     "vue-router": "^4.2.5"
