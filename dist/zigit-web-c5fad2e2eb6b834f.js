@@ -70,7 +70,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('zigit-web-b206c1c6eb5873ae_bg.wasm', import.meta.url);
+        input = new URL('zigit-web-c5fad2e2eb6b834f_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
