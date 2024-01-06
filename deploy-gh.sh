@@ -11,3 +11,4 @@ trunk build --release
 
 # Copy files from dist to docs
 cp -r dist/* docs/
+cp -r dist/img/* docs/img/
