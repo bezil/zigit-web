@@ -1169,7 +1169,9 @@ name = "zigit-web"
 version = "0.1.0"
 dependencies = [
  "gloo-net 0.2.6",
+ "js-sys",
  "serde",
  "wasm-bindgen-futures",
+ "web-sys",
  "yew",
 ]

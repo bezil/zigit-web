@@ -1,5 +1,5 @@
 .dockerignore
-
+.vscode/*
 # Added by cargo
 /dist
 /target
