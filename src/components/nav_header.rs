@@ -14,7 +14,7 @@ pub fn NavHeader() -> Html {
                 width="100px"
                 src="img/logo.png" alt="zigit" class="logo"
             />
-            <div class="flex justify-center space-x-8 w-full">
+            <div class="flex justify-center space-x-8 w-full uppercase">
             <span>{ nav_items[0] }</span>
             <span>{ nav_items[1] }</span>
             </div>
