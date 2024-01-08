@@ -32,7 +32,9 @@ pub fn App() -> Html {
     html! {
         <div class="h-screen bg-zig-grey text-white font-mono">
             <NavHeader />
-            <p> {   (*body).clone().note }   </p>
+            <p>
+            {   (*body).clone().note }
+            </p>
         </div>
     }
 }
