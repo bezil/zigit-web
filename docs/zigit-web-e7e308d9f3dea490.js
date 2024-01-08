@@ -405,6 +405,11 @@ function __wbg_get_imports() {
         wasm.__wbindgen_free(arg0, arg1 * 4, 4);
         console.error(...v0);
     };
+    imports.wbg.__wbg_log_7c3433e130418e14 = function(arg0, arg1) {
+        var v0 = getArrayJsValueFromWasm0(arg0, arg1).slice();
+        wasm.__wbindgen_free(arg0, arg1 * 4, 4);
+        console.log(...v0);
+    };
     imports.wbg.__wbg_body_64abc9aba1891e91 = function(arg0) {
         const ret = getObject(arg0).body;
         return isLikeNone(ret) ? 0 : addHeapObject(ret);
@@ -631,9 +636,6 @@ function __wbg_get_imports() {
         const ret = new URLSearchParams();
         return addHeapObject(ret);
     }, arguments) };
-    imports.wbg.__wbg_log_a4530b4fe289336f = function(arg0) {
-        console.log(getObject(arg0));
-    };
     imports.wbg.__wbg_get_f01601b5a68d10e3 = function(arg0, arg1) {
         const ret = getObject(arg0)[arg1 >>> 0];
         return addHeapObject(ret);
@@ -734,12 +736,12 @@ function __wbg_get_imports() {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper349 = function(arg0, arg1, arg2) {
-        const ret = makeClosure(arg0, arg1, 123, __wbg_adapter_22);
+    imports.wbg.__wbindgen_closure_wrapper370 = function(arg0, arg1, arg2) {
+        const ret = makeClosure(arg0, arg1, 130, __wbg_adapter_22);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper631 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 222, __wbg_adapter_25);
+    imports.wbg.__wbindgen_closure_wrapper652 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 229, __wbg_adapter_25);
         return addHeapObject(ret);
     };
 
@@ -781,7 +783,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('zigit-web-d96e78322ab5ef74_bg.wasm', import.meta.url);
+        input = new URL('zigit-web-e7e308d9f3dea490_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
