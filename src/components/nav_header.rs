@@ -1,7 +1,13 @@
 use yew::prelude::*;
 
-#[function_component]
-pub fn NavHeader() -> Html {
+
+#[derive(Properties, PartialEq)]
+pub struct NavigationItemProps {
+   pub version: String,
+}
+
+#[function_component(NavHeader)]
+pub fn nav_header(props: &NavigationItemProps) -> Html {
 
     let nav_items = ["Home", "About"];
 
@@ -17,6 +23,9 @@ pub fn NavHeader() -> Html {
             <div class="flex justify-center space-x-8 w-full uppercase">
             <span>{ nav_items[0] }</span>
             <span>{ nav_items[1] }</span>
+            </div>
+            <div class="pt-9">
+                <span class="text-xs">{ &props.version }</span>
             </div>
         </div>
     }
