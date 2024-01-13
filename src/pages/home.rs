@@ -8,7 +8,7 @@ use crate::models::home_header::NavigationItem;
 pub fn home_page() -> Html {
     let body = use_state(|| NavigationItem {
         id: 0,
-        note: "Not Found".to_string(),
+        note: "Coming Soon".to_string(),
     });
     {
         let body = body.clone();

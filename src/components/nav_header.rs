@@ -7,9 +7,9 @@ pub struct NavigationItemProps {
 }
 
 #[function_component(NavHeader)]
-pub fn nav_header(props: &NavigationItemProps) -> Html {
+pub fn nav_header(_props: &NavigationItemProps) -> Html {
 
-    let nav_items = ["Home", "About"];
+    let nav_items = ["Home", "Jobs"];
 
     html! {
         <div
@@ -24,9 +24,9 @@ pub fn nav_header(props: &NavigationItemProps) -> Html {
             <span>{ nav_items[0] }</span>
             <span>{ nav_items[1] }</span>
             </div>
-            <div class="pt-9">
-                <span class="text-xs">{ &props.version }</span>
-            </div>
+            // <div class="pt-9">
+            //     <span class="text-xs">{ &props.version }</span>
+            // </div>
         </div>
     }
 }
